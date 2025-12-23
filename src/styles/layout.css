@@ -1,0 +1,58 @@
+/* Base layout styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background-color: white;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  height: 3.5rem;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
+  padding-top: 3.5rem; /* header height */
+  padding-bottom: 4rem; /* footer height */
+  height: calc(100vh - 7.5rem);
+  height: calc(var(--vh, 1vh) * 100 - 7.5rem);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background-color: white;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: position 0.3s ease;
+  padding-bottom: env(safe-area-inset-bottom);
+  height: 4rem;
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .app-container {
+    min-height: -webkit-fill-available;
+  }
+  
+  .content {
+    height: calc(var(--vh, 1vh) * 100 - 7.5rem - env(safe-area-inset-bottom));
+  }
+}

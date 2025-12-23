@@ -1,0 +1,40 @@
+{
+  "name": "hitorigoto-chat-memo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "date-fns": "^2.30.0",
+    "@vueuse/core": "^10.7.0",
+    "dexie": "^3.2.4",
+    "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.2.0",
+    "node-html-parser": "^6.1.12",
+    "@supabase/supabase-js": "^2.39.3",
+    "metascraper": "^5.45.0",
+    "metascraper-title": "^5.45.0",
+    "metascraper-description": "^5.45.0",
+    "metascraper-image": "^5.45.0",
+    "@headlessui/vue": "^1.7.19",
+    "@heroicons/vue": "^2.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.0",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^0.17.4",
+    "@vueuse/head": "^2.0.0",
+    "autoprefixer": "^10.4.16",
+    "tailwindcss": "^3.3.5",
+    "postcss": "^8.4.31",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10"
+  }
+}
